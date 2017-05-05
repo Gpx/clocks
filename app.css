@@ -1,0 +1,1999 @@
+:root {
+  --digits-on-page: 6;
+  --clock-size: calc(100vw / (4 * var(--digits-on-page)));
+  --arm-width: calc(var(--clock-size) * 0.05);
+  --arm-length: calc(var(--clock-size) / 2);
+  --arm-color: #333;
+  --transition-time: .4s;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #eee;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+
+.digit {
+  width: calc(var(--clock-size) * 4);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clock {
+  position: relative;
+  height: var(--clock-size);
+  width: var(--clock-size);
+  border-radius: 50%;
+  box-shadow:
+    0 1px 1px rgba(0,0,0,.7),
+    0 3px 5px -3px; rgba(0,0,0,.3)
+    0 0 5px; rgba(0,0,0,.3);
+}
+
+.clock::before,
+.clock::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - var(--arm-width) / 2);
+  top: calc(var(--clock-size) / 2 - var(--arm-length));
+  height: var(--arm-length);
+  width: var(--arm-width);
+  background-color: var(--arm-color);
+  transform: rotateZ(0deg);
+  transform-origin: bottom;
+}
+
+.clock::before {
+  transition: transform ease-in-out var(--transition-time);
+}
+
+.clock::after {
+  transition: transform ease-in-out calc(var(--transition-time) * 2);
+}
+
+/* zero */
+
+.digit.zero .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(2)::before {
+  transform: rotateZ(270deg);
+}
+
+.digit.zero .clock:nth-child(2)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(3)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(3)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.zero .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.zero .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(5)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(6)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(7)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.zero .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(8)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(9)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(10)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(10)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(11)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(12)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(12)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(13)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(14)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(14)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(15)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(15)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(17)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(18)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(18)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(19)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.zero .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.zero .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.zero .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.zero .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.zero .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.zero .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* one */
+
+.digit.one .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(2)::before {
+  transform: rotateZ(270deg);
+}
+
+.digit.one .clock:nth-child(2)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(3)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(3)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.one .clock:nth-child(4)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(4)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(5)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(6)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(6)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.one .clock:nth-child(7)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(7)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(8)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(8)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(9)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(9)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(10)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(10)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(11)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(12)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(12)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(13)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(13)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(14)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(14)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(15)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(15)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(16)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(16)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.one .clock:nth-child(17)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(18)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(18)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.one .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(19)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(20)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.one .clock:nth-child(20)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.one .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.one .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.one .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.one .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.one .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* two */
+
+.digit.two .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(2)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(2)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(3)::before {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(3)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(5)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(6)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(7)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(8)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(9)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(10)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(10)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(11)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(12)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(12)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(13)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(14)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(14)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(15)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(15)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(16)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(17)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(18)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(18)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(19)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(19)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(20)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.two .clock:nth-child(20)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.two .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.two .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.two .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* three */
+
+.digit.three .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(2)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(2)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(3)::before {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(3)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(5)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(6)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(7)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(8)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(9)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(10)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(10)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(11)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(12)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(12)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(13)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(14)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(14)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(15)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(15)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(17)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(18)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(18)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(19)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.three .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.three .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.three .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.three .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* four */
+
+.digit.four .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.four .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(2)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(2)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.four .clock:nth-child(3)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.four .clock:nth-child(3)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.four .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(5)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(6)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(6)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(7)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(7)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(8)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(9)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(10)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(10)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.four .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(11)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.four .clock:nth-child(12)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(12)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(13)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.four .clock:nth-child(14)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.four .clock:nth-child(14)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.four .clock:nth-child(15)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(15)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.four .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(17)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(17)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(18)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(18)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(19)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.four .clock:nth-child(21)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(21)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(22)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(22)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.four .clock:nth-child(23)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(23)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.four .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.four .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* five */
+
+.digit.five .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(2)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(2)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(3)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(3)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(5)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(6)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(7)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(8)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(9)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(10)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(10)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(11)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(11)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(12)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(12)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(13)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(14)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(14)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(15)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(15)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(17)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(18)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(18)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(19)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.five .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.five .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.five .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.five .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* six */
+
+.digit.six .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(2)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(2)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(3)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(3)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(5)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(6)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(7)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(8)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(9)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(10)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(10)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(11)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(11)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(12)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(12)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(13)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(14)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(14)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(15)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(15)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(17)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(18)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(18)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(19)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.six .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.six .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.six .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.six .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* seven */
+
+.digit.seven .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.seven .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(2)::before {
+  transform: rotateZ(270deg);
+}
+
+.digit.seven .clock:nth-child(2)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.seven .clock:nth-child(3)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.seven .clock:nth-child(3)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.seven .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.seven .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(5)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.seven .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.seven .clock:nth-child(6)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.seven .clock:nth-child(7)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.seven .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(8)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(9)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(9)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(10)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(10)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(11)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(12)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(12)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(13)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(13)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(14)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(14)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(15)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(15)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(17)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(17)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(18)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(18)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(19)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.seven .clock:nth-child(21)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(21)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(22)::before {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(22)::after {
+  transform: rotateZ(225deg);
+}
+
+.digit.seven .clock:nth-child(23)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(23)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.seven .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.seven .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* eight */
+
+.digit.eight .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(2)::before {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(2)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(3)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(3)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(5)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(6)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(7)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(8)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(9)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(10)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(10)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(11)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(12)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(12)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(13)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(14)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(14)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(15)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(15)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(17)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(18)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(18)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(19)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.eight .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.eight .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.eight .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.eight .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
+
+/* nine */
+
+.digit.nine .clock:nth-child(1)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(1)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(2)::before {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(2)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(3)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(3)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(4)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(4)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(5)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(5)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(6)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(6)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(7)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(7)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(8)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(8)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(9)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(9)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(10)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(10)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(11)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(11)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(12)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(12)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(13)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(13)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(14)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(14)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(15)::before {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(15)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(16)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(16)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(17)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(17)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(18)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(18)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(19)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(19)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(20)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(20)::after {
+  transform: rotateZ(180deg);
+}
+
+.digit.nine .clock:nth-child(21)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(21)::after {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(22)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(22)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(23)::before {
+  transform: rotateZ(90deg);
+}
+
+.digit.nine .clock:nth-child(23)::after {
+  transform: rotateZ(270deg);
+}
+
+.digit.nine .clock:nth-child(24)::before {
+  transform: rotateZ(0deg);
+}
+
+.digit.nine .clock:nth-child(24)::after {
+  transform: rotateZ(270deg);
+}
